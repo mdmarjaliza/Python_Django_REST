@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}
+    {{ post.titulo }}
+{% endblock %}
+
+{% block body%}
+    <div id="comienzo" class="container">
+		<div class="art-container">
+				<article class="articulo" data-id="3">
+					<div class="author-container">
+						<img class="author-img" src="" alt="">
+						<div class="info-author">
+							<div>
+								<span class="author-name">{{ post.owner.first_name }} {{ post.owner.last_name}}</span>
+							</div>
+							<div>
+								<time class="timeago" datetime="">{{ post.fec_publicacion }}</time>
+							</div>
+
+						</div>
+					</div>
+					<div class="visual-container detail">
+						<img class="visual" src="{{ post.url }}" alt="">
+					</div>
+					<div class="text-container">
+						<h2 class="art-headline">{{ post.titulo }}</h2>
+						<p class="art-text-extended">{{ post.cuerpo }}</p>
+					</div>
+				</article>
+		</div>
+	</div>
+{% endblock %}

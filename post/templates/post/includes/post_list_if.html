@@ -1,0 +1,6 @@
+{% if posts_list|length > 0 %}
+    <h2>Últimos posts publicados</h2>
+    {% include "post/includes/posts_display.html" %}
+{% else %}
+    {% include "post/includes/user_with_no_posts.html" %}
+{% endif %}

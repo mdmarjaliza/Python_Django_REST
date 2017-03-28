@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Alta de usuario
+{% endblock%}
+{% block body %}
+    <h1>Alta de usuario</h1>
+    {% if user.is_authenticated%}
+        <h3>Si quieres crear otro usuario debes cerrar sesión</h3>
+    {% else %}
+        {{ message }}
+        <form method="post" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Enviar</button>
+        </form>
+    {% endif %}
+{% endblock%}

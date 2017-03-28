@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+
+{% block body %}
+    <h1>Blog de {{ blogger }}</h1>
+    {% include "post/includes/post_list_if.html" %}
+{% endblock %}

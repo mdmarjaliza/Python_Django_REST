@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Blogs
+{% endblock %}
+
+{% block body %}
+    <h1>Blogs actuales</h1>
+    {% for blog in bloggers %}
+        <a href="{% url 'post_usersposts' blog %}"><h4>{{ blog }}</h4></a>
+    {% endfor %}
+{% endblock %}
